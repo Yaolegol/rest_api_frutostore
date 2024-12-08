@@ -12,16 +12,16 @@ class ProductSeeder extends Seeder
     public function run()
     {
         $products = [
-            ['price' => 50, 'image' => 'apple.jpg'],
-            ['price' => 100, 'image' => 'banana.jpg'],
-            ['price' => 80, 'image' => 'orange.jpg'],
-            ['price' => 120, 'image' => 'grape.jpg'],
-            ['price' => 70, 'image' => 'pear.jpg'],
-            ['price' => 150, 'image' => 'peach.jpg'],
-            ['price' => 200, 'image' => 'pineapple.jpg'],
-            ['price' => 90, 'image' => 'kiwi.jpg'],
-            ['price' => 60, 'image' => 'plum.jpg'],
-            ['price' => 180, 'image' => 'mango.jpg'],
+            ['price' => 50, 'image' => 'http://localhost:8000/storage/images/fruits/apple-min.jpg'],
+            ['price' => 100, 'image' => 'http://localhost:8000/storage/images/fruits/bananas-min.jpg'],
+            ['price' => 80, 'image' => 'http://localhost:8000/storage/images/fruits/oranges-min.jpg'],
+            ['price' => 120, 'image' => 'http://localhost:8000/storage/images/fruits/grape-min.jpg'],
+            ['price' => 70, 'image' => 'http://localhost:8000/storage/images/fruits/pear-min.jpg'],
+            ['price' => 150, 'image' => 'http://localhost:8000/storage/images/fruits/peach-min.jpg'],
+            ['price' => 200, 'image' => 'http://localhost:8000/storage/images/fruits/pineapple-min.jpg'],
+            ['price' => 90, 'image' => 'http://localhost:8000/storage/images/fruits/kiwi-min.jpg'],
+            ['price' => 60, 'image' => 'http://localhost:8000/storage/images/fruits/coconut-min.jpg'],
+            ['price' => 180, 'image' => 'http://localhost:8000/storage/images/fruits/mango-min.jpg'],
         ];
 
         $translations = [
@@ -58,8 +58,8 @@ class ProductSeeder extends Seeder
                 'ru' => ['title' => 'Киви', 'description' => 'Экзотические и освежающие киви']
             ],
             [
-                'en' => ['title' => 'Plum', 'description' => 'Sweet and juicy plums'],
-                'ru' => ['title' => 'Слива', 'description' => 'Сладкие и сочные сливы']
+                'en' => ['title' => 'Coconut', 'description' => 'Sweet and juicy coconuts'],
+                'ru' => ['title' => 'Кокос', 'description' => 'Сладкие и сочные кокосы']
             ],
             [
                 'en' => ['title' => 'Mango', 'description' => 'Rich and tropical mangoes'],
