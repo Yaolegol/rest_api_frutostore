@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductTranslation;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -12,35 +13,35 @@ class ProductSeeder extends Seeder
     public function run()
     {
         $products = [
-            ['price' => 50, 'image' => 'http://localhost:8000/storage/images/fruits/apple.jpg'],
-            ['price' => 60, 'image' => 'http://localhost:8000/storage/images/fruits/avocado.jpg'],
-            ['price' => 70, 'image' => 'http://localhost:8000/storage/images/fruits/bananas.jpg'],
-            ['price' => 55, 'image' => 'http://localhost:8000/storage/images/fruits/black-currant.jpg'],
-            ['price' => 65, 'image' => 'http://localhost:8000/storage/images/fruits/blackberry.jpg'],
-            ['price' => 75, 'image' => 'http://localhost:8000/storage/images/fruits/blueberry.jpg'],
-            ['price' => 80, 'image' => 'http://localhost:8000/storage/images/fruits/cherry.jpg'],
-            ['price' => 45, 'image' => 'http://localhost:8000/storage/images/fruits/coconut.jpg'],
-            ['price' => 90, 'image' => 'http://localhost:8000/storage/images/fruits/cranberry.jpg'],
-            ['price' => 85, 'image' => 'http://localhost:8000/storage/images/fruits/gooseberry.jpg'],
-            ['price' => 95, 'image' => 'http://localhost:8000/storage/images/fruits/grape.jpg'],
-            ['price' => 100, 'image' => 'http://localhost:8000/storage/images/fruits/grapefruit.jpg'],
-            ['price' => 110, 'image' => 'http://localhost:8000/storage/images/fruits/kiwi.jpg'],
-            ['price' => 120, 'image' => 'http://localhost:8000/storage/images/fruits/lemon.jpg'],
-            ['price' => 130, 'image' => 'http://localhost:8000/storage/images/fruits/mango.jpg'],
-            ['price' => 140, 'image' => 'http://localhost:8000/storage/images/fruits/melon.jpg'],
-            ['price' => 150, 'image' => 'http://localhost:8000/storage/images/fruits/orange.jpg'],
-            ['price' => 160, 'image' => 'http://localhost:8000/storage/images/fruits/peach.jpg'],
-            ['price' => 170, 'image' => 'http://localhost:8000/storage/images/fruits/pear.jpg'],
-            ['price' => 180, 'image' => 'http://localhost:8000/storage/images/fruits/persimmon.jpg'],
-            ['price' => 190, 'image' => 'http://localhost:8000/storage/images/fruits/pineapple.jpg'],
-            ['price' => 200, 'image' => 'http://localhost:8000/storage/images/fruits/plum.jpg'],
-            ['price' => 210, 'image' => 'http://localhost:8000/storage/images/fruits/pomegranate.jpg'],
-            ['price' => 220, 'image' => 'http://localhost:8000/storage/images/fruits/raspberry.jpg'],
-            ['price' => 230, 'image' => 'http://localhost:8000/storage/images/fruits/sea-buckthorn.jpg'],
-            ['price' => 240, 'image' => 'http://localhost:8000/storage/images/fruits/strawberry.jpg'],
-            ['price' => 250, 'image' => 'http://localhost:8000/storage/images/fruits/sweet-cherry.jpg'],
-            ['price' => 260, 'image' => 'http://localhost:8000/storage/images/fruits/tangerines.jpg'],
-            ['price' => 270, 'image' => 'http://localhost:8000/storage/images/fruits/watermelon.jpg'],
+            ['category_id' => 1, 'price' => 50, 'image' => 'http://localhost:8000/storage/images/fruits/apple.jpg'],
+            ['category_id' => 1, 'price' => 60, 'image' => 'http://localhost:8000/storage/images/fruits/avocado.jpg'],
+            ['category_id' => 1, 'price' => 70, 'image' => 'http://localhost:8000/storage/images/fruits/bananas.jpg'],
+            ['category_id' => 2, 'price' => 55, 'image' => 'http://localhost:8000/storage/images/fruits/black-currant.jpg'],
+            ['category_id' => 2, 'price' => 65, 'image' => 'http://localhost:8000/storage/images/fruits/blackberry.jpg'],
+            ['category_id' => 2, 'price' => 75, 'image' => 'http://localhost:8000/storage/images/fruits/blueberry.jpg'],
+            ['category_id' => 2, 'price' => 80, 'image' => 'http://localhost:8000/storage/images/fruits/cherry.jpg'],
+            ['category_id' => 1, 'price' => 45, 'image' => 'http://localhost:8000/storage/images/fruits/coconut.jpg'],
+            ['category_id' => 2, 'price' => 90, 'image' => 'http://localhost:8000/storage/images/fruits/cranberry.jpg'],
+            ['category_id' => 2, 'price' => 85, 'image' => 'http://localhost:8000/storage/images/fruits/gooseberry.jpg'],
+            ['category_id' => 1, 'price' => 95, 'image' => 'http://localhost:8000/storage/images/fruits/grape.jpg'],
+            ['category_id' => 1, 'price' => 100, 'image' => 'http://localhost:8000/storage/images/fruits/grapefruit.jpg'],
+            ['category_id' => 1, 'price' => 110, 'image' => 'http://localhost:8000/storage/images/fruits/kiwi.jpg'],
+            ['category_id' => 1, 'price' => 120, 'image' => 'http://localhost:8000/storage/images/fruits/lemon.jpg'],
+            ['category_id' => 1, 'price' => 130, 'image' => 'http://localhost:8000/storage/images/fruits/mango.jpg'],
+            ['category_id' => 1, 'price' => 140, 'image' => 'http://localhost:8000/storage/images/fruits/melon.jpg'],
+            ['category_id' => 1, 'price' => 150, 'image' => 'http://localhost:8000/storage/images/fruits/orange.jpg'],
+            ['category_id' => 1, 'price' => 160, 'image' => 'http://localhost:8000/storage/images/fruits/peach.jpg'],
+            ['category_id' => 1, 'price' => 170, 'image' => 'http://localhost:8000/storage/images/fruits/pear.jpg'],
+            ['category_id' => 1, 'price' => 180, 'image' => 'http://localhost:8000/storage/images/fruits/persimmon.jpg'],
+            ['category_id' => 1, 'price' => 190, 'image' => 'http://localhost:8000/storage/images/fruits/pineapple.jpg'],
+            ['category_id' => 1, 'price' => 200, 'image' => 'http://localhost:8000/storage/images/fruits/plum.jpg'],
+            ['category_id' => 1, 'price' => 210, 'image' => 'http://localhost:8000/storage/images/fruits/pomegranate.jpg'],
+            ['category_id' => 2, 'price' => 220, 'image' => 'http://localhost:8000/storage/images/fruits/raspberry.jpg'],
+            ['category_id' => 2, 'price' => 230, 'image' => 'http://localhost:8000/storage/images/fruits/sea-buckthorn.jpg'],
+            ['category_id' => 2, 'price' => 240, 'image' => 'http://localhost:8000/storage/images/fruits/strawberry.jpg'],
+            ['category_id' => 2, 'price' => 250, 'image' => 'http://localhost:8000/storage/images/fruits/sweet-cherry.jpg'],
+            ['category_id' => 1, 'price' => 260, 'image' => 'http://localhost:8000/storage/images/fruits/tangerines.jpg'],
+            ['category_id' => 2, 'price' => 270, 'image' => 'http://localhost:8000/storage/images/fruits/watermelon.jpg'],
         ];
 
         $translations = [
@@ -161,6 +162,15 @@ class ProductSeeder extends Seeder
                 'ru' => ['title' => 'Арбуз', 'description' => 'Сладкий и освежающий арбуз']
             ],
         ];
+
+        $categories = [
+            ['title' => 'Фрукты'],
+            ['title' => 'Ягоды'],
+        ];
+
+        foreach ($categories as $category) {
+            Category::create($category);
+        }
 
         foreach ($products as $index => $productData) {
             $product = Product::create($productData);
