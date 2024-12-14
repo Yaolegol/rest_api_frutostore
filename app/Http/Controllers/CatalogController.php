@@ -14,13 +14,13 @@ class CatalogController extends Controller
     {
         $locale = $request->get('locale', 'ru');
 
-        $query = Product::with(['translations' => function ($query) use ($locale) {
+        $query = Product::with(['category', 'translations' => function ($query) use ($locale) {
             $query->where('locale', $locale);
-        }, 'categories']);
+        }]);
 
         if ($request->has('category')) {
             $query->whereHas('category', function ($q) use ($request) {
-                $q->where('name', $request->category);
+                $q->where('title', $request->category);
             });
         }
 
