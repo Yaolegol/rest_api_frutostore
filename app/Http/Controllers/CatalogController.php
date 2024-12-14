@@ -20,7 +20,7 @@ class CatalogController extends Controller
 
         if ($request->has('category')) {
             $query->whereHas('category', function ($q) use ($request) {
-                $q->where('title', $request->category);
+                $q->where('id', $request->category);
             });
         }
 
@@ -36,7 +36,7 @@ class CatalogController extends Controller
             $query->orderBy($request->sort_by, $request->get('order', 'asc'));
         }
 
-        $products = $query->paginate($request->get('per_page', 10));
+        $products = $query->paginate(10, ['*'], 'page', $request->get('page', 1));
 
         return response()->json($products);
     }
