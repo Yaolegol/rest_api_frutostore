@@ -36,7 +36,7 @@ class CatalogController extends Controller
             $query->orderBy($request->sort_by, $request->get('order', 'asc'));
         }
 
-        $products = $query->paginate(10, ['*'], 'page', $request->get('page', 1));
+        $products = $query->paginate(12, ['*'], 'page', $request->get('page', 1));
 
         return response()->json($products);
     }
