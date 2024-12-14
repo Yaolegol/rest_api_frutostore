@@ -10,27 +10,31 @@ class CatalogController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $locale = request()->get('locale', 'ru');
+        $query = Product::with(['translations', 'categories']);
 
-        $products = Product::with(['translations' => function ($query) use ($locale) {
-            $query->where('locale', $locale);
-        }])->get();
+        if ($request->has('category')) {
+            $query->whereHas('category', function ($q) use ($request) {
+                $q->where('name', $request->category);
+            });
+        }
 
-        $localizedProducts = $products->map(function ($product) {
-            $translation = $product->translations->first();
+        if ($request->has('min_price')) {
+            $query->where('price', '>=', $request->min_price);
+        }
 
-            return [
-                'id' => $product->id,
-                'title' => $translation ? $translation->title : '',
-                'description' => $translation ? $translation->description : '',
-                'price' => $product->price,
-                'image' => $product->image,
-            ];
-        });
+        if ($request->has('max_price')) {
+            $query->where('price', '<=', $request->max_price);
+        }
 
-        return response()->json($localizedProducts);
+        if ($request->has('sort_by')) {
+            $query->orderBy($request->sort_by, $request->get('order', 'asc'));
+        }
+
+        $products = $query->paginate($request->get('per_page', 10));
+
+        return response()->json($products);
     }
 
     /**
