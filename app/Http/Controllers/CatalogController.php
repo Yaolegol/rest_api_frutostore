@@ -27,13 +27,14 @@ class CatalogController extends Controller
             $filtersArray = explode("--", $request->filters);
 
             foreach ($filtersArray as $filterString) {
-                $filtersArray = explode("-", $request->filters);
+                $filtersArray = explode("-", $filterString);
                 $filterName = $filtersArray[0];
 
                 $isPriceFilter = $filterName === 'price';
 
                 if($isPriceFilter) {
                     $values = explode("_", $filtersArray[1]);
+
                     $min = $values[0];
                     $max = $values[1];
 
@@ -44,13 +45,15 @@ class CatalogController extends Controller
                     if($max != 'undefined') {
                         $priceFilterTo = $max;
                     }
+                } else {
+                    $category = $filtersArray[1];
                 }
             }
         }
 
-        if ($request->has('category')) {
-            $query->whereHas('category', function ($q) use ($request) {
-                $q->where('id', $request->category);
+        if ($category != null) {
+            $query->whereHas('category', function ($q) use ($category) {
+                $q->where('title', $category);
             });
         }
 
