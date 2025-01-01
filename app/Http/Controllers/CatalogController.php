@@ -18,18 +18,48 @@ class CatalogController extends Controller
             $query->where('locale', $locale);
         }]);
 
+        $priceFilterFrom = null;
+        $priceFilterTo = null;
+
+        $category = null;
+
+        if($request->has('filters')) {
+            $filtersArray = explode("--", $request->filters);
+
+            foreach ($filtersArray as $filterString) {
+                $filtersArray = explode("-", $request->filters);
+                $filterName = $filtersArray[0];
+
+                $isPriceFilter = $filterName === 'price';
+
+                if($isPriceFilter) {
+                    $values = explode("_", $filtersArray[1]);
+                    $min = $values[0];
+                    $max = $values[1];
+
+                    if($min != 'undefined') {
+                        $priceFilterFrom = $min;
+                    }
+
+                    if($max != 'undefined') {
+                        $priceFilterTo = $max;
+                    }
+                }
+            }
+        }
+
         if ($request->has('category')) {
             $query->whereHas('category', function ($q) use ($request) {
                 $q->where('id', $request->category);
             });
         }
 
-        if ($request->has('min_price')) {
-            $query->where('price', '>=', $request->min_price);
+        if ($priceFilterFrom != null) {
+            $query->where('price', '>=', $priceFilterFrom);
         }
 
-        if ($request->has('max_price')) {
-            $query->where('price', '<=', $request->max_price);
+        if ($priceFilterTo != null) {
+            $query->where('price', '<=', $priceFilterTo);
         }
 
         if ($request->has('sort_by')) {
