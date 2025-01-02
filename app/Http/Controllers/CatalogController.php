@@ -53,7 +53,7 @@ class CatalogController extends Controller
 
         if ($category != null) {
             $query->whereHas('category', function ($q) use ($category) {
-                $q->where('title', $category);
+                $q->where('code', $category);
             });
         }
 
@@ -65,8 +65,8 @@ class CatalogController extends Controller
             $query->where('price', '<=', $priceFilterTo);
         }
 
-        if ($request->has('sort_by')) {
-            $query->orderBy($request->sort_by, $request->get('order', 'asc'));
+        if ($request->has('sort')) {
+            $query->orderBy('price', $request->get('sort', 'asc'));
         }
 
         $products = $query->paginate(12, ['*'], 'page', $request->get('page', 1));

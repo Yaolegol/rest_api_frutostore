@@ -164,8 +164,8 @@ class ProductSeeder extends Seeder
         ];
 
         $categories = [
-            ['title' => 'fruit'],
-            ['title' => 'berry'],
+            ['code' => 'fruit'],
+            ['code' => 'berry'],
         ];
 
         foreach ($categories as $category) {
