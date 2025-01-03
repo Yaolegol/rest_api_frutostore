@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductTranslation;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -46,120 +45,120 @@ class ProductSeeder extends Seeder
 
         $translations = [
             [
-                'en' => ['title' => 'Apple', 'description' => 'Delicious and juicy apples'],
-                'ru' => ['title' => 'Яблоко', 'description' => 'Вкусные и сочные яблоки']
+                'en-US' => ['title' => 'Apple', 'description' => 'Delicious and juicy apples'],
+                'ru-RU' => ['title' => 'Яблоко', 'description' => 'Вкусные и сочные яблоки']
             ],
             [
-                'en' => ['title' => 'Avocado', 'description' => 'Creamy and nutritious avocados'],
-                'ru' => ['title' => 'Авокадо', 'description' => 'Кремовые и питательные авокадо']
+                'en-US' => ['title' => 'Avocado', 'description' => 'Creamy and nutritious avocados'],
+                'ru-RU' => ['title' => 'Авокадо', 'description' => 'Кремовые и питательные авокадо']
             ],
             [
-                'en' => ['title' => 'Bananas', 'description' => 'Sweet and ripe bananas'],
-                'ru' => ['title' => 'Бананы', 'description' => 'Сладкие и спелые бананы']
+                'en-US' => ['title' => 'Bananas', 'description' => 'Sweet and ripe bananas'],
+                'ru-RU' => ['title' => 'Бананы', 'description' => 'Сладкие и спелые бананы']
             ],
             [
-                'en' => ['title' => 'Black-currant', 'description' => 'Tart and flavorful black currants'],
-                'ru' => ['title' => 'Черная смородина', 'description' => 'Кислая и ароматная черная смородина']
+                'en-US' => ['title' => 'Black-currant', 'description' => 'Tart and flavorful black currants'],
+                'ru-RU' => ['title' => 'Черная смородина', 'description' => 'Кислая и ароматная черная смородина']
             ],
             [
-                'en' => ['title' => 'Blackberry', 'description' => 'Juicy and sweet blackberries'],
-                'ru' => ['title' => 'Ежевика', 'description' => 'Сочные и сладкие ежевики']
+                'en-US' => ['title' => 'Blackberry', 'description' => 'Juicy and sweet blackberries'],
+                'ru-RU' => ['title' => 'Ежевика', 'description' => 'Сочные и сладкие ежевики']
             ],
             [
-                'en' => ['title' => 'Blueberry', 'description' => 'Sweet and nutritious blueberries'],
-                'ru' => ['title' => 'Голубика', 'description' => 'Сладкая и питательная голубика']
+                'en-US' => ['title' => 'Blueberry', 'description' => 'Sweet and nutritious blueberries'],
+                'ru-RU' => ['title' => 'Голубика', 'description' => 'Сладкая и питательная голубика']
             ],
             [
-                'en' => ['title' => 'Cherry', 'description' => 'Sweet and tart cherries'],
-                'ru' => ['title' => 'Вишня', 'description' => 'Сладкие и кислые вишни']
+                'en-US' => ['title' => 'Cherry', 'description' => 'Sweet and tart cherries'],
+                'ru-RU' => ['title' => 'Вишня', 'description' => 'Сладкие и кислые вишни']
             ],
             [
-                'en' => ['title' => 'Coconut', 'description' => 'Rich and creamy coconuts'],
-                'ru' => ['title' => 'Кокос', 'description' => 'Богатые и кремовые кокосы']
+                'en-US' => ['title' => 'Coconut', 'description' => 'Rich and creamy coconuts'],
+                'ru-RU' => ['title' => 'Кокос', 'description' => 'Богатые и кремовые кокосы']
             ],
             [
-                'en' => ['title' => 'Cranberry', 'description' => 'Tart and healthy cranberries'],
-                'ru' => ['title' => 'Клюква', 'description' => 'Кислая и полезная клюква']
+                'en-US' => ['title' => 'Cranberry', 'description' => 'Tart and healthy cranberries'],
+                'ru-RU' => ['title' => 'Клюква', 'description' => 'Кислая и полезная клюква']
             ],
             [
-                'en' => ['title' => 'Gooseberry', 'description' => 'Tangy and sweet gooseberries'],
-                'ru' => ['title' => 'Крыжовник', 'description' => 'Кисло-сладкий крыжовник']
+                'en-US' => ['title' => 'Gooseberry', 'description' => 'Tangy and sweet gooseberries'],
+                'ru-RU' => ['title' => 'Крыжовник', 'description' => 'Кисло-сладкий крыжовник']
             ],
             [
-                'en' => ['title' => 'Grape', 'description' => 'Sweet and juicy grapes'],
-                'ru' => ['title' => 'Виноград', 'description' => 'Сладкий и сочный виноград']
+                'en-US' => ['title' => 'Grape', 'description' => 'Sweet and juicy grapes'],
+                'ru-RU' => ['title' => 'Виноград', 'description' => 'Сладкий и сочный виноград']
             ],
             [
-                'en' => ['title' => 'Grapefruit', 'description' => 'Tart and refreshing grapefruits'],
-                'ru' => ['title' => 'Грейпфрут', 'description' => 'Кислый и освежающий грейпфрут']
+                'en-US' => ['title' => 'Grapefruit', 'description' => 'Tart and refreshing grapefruits'],
+                'ru-RU' => ['title' => 'Грейпфрут', 'description' => 'Кислый и освежающий грейпфрут']
             ],
             [
-                'en' => ['title' => 'Kiwi', 'description' => 'Tangy and sweet kiwis'],
-                'ru' => ['title' => 'Киви', 'description' => 'Кисло-сладкие киви']
+                'en-US' => ['title' => 'Kiwi', 'description' => 'Tangy and sweet kiwis'],
+                'ru-RU' => ['title' => 'Киви', 'description' => 'Кисло-сладкие киви']
             ],
             [
-                'en' => ['title' => 'Lemon', 'description' => 'Sour and refreshing lemons'],
-                'ru' => ['title' => 'Лемон', 'description' => 'Кислый и освежающий лимон']
+                'en-US' => ['title' => 'Lemon', 'description' => 'Sour and refreshing lemons'],
+                'ru-RU' => ['title' => 'Лемон', 'description' => 'Кислый и освежающий лимон']
             ],
             [
-                'en' => ['title' => 'Mango', 'description' => 'Sweet and tropical mangoes'],
-                'ru' => ['title' => 'Манго', 'description' => 'Сладкие и тропические манго']
+                'en-US' => ['title' => 'Mango', 'description' => 'Sweet and tropical mangoes'],
+                'ru-RU' => ['title' => 'Манго', 'description' => 'Сладкие и тропические манго']
             ],
             [
-                'en' => ['title' => 'Melon', 'description' => 'Sweet and juicy melons'],
-                'ru' => ['title' => 'Дыня', 'description' => 'Сладкая и сочная дыня']
+                'en-US' => ['title' => 'Melon', 'description' => 'Sweet and juicy melons'],
+                'ru-RU' => ['title' => 'Дыня', 'description' => 'Сладкая и сочная дыня']
             ],
             [
-                'en' => ['title' => 'Orange', 'description' => 'Sweet and tangy oranges'],
-                'ru' => ['title' => 'Апельсины', 'description' => 'Сладкие и кислые апельсины']
+                'en-US' => ['title' => 'Orange', 'description' => 'Sweet and tangy oranges'],
+                'ru-RU' => ['title' => 'Апельсины', 'description' => 'Сладкие и кислые апельсины']
             ],
             [
-                'en' => ['title' => 'Peach', 'description' => 'Sweet and juicy peaches'],
-                'ru' => ['title' => 'Персики', 'description' => 'Сладкие и сочные персики']
+                'en-US' => ['title' => 'Peach', 'description' => 'Sweet and juicy peaches'],
+                'ru-RU' => ['title' => 'Персики', 'description' => 'Сладкие и сочные персики']
             ],
             [
-                'en' => ['title' => 'Pear', 'description' => 'Sweet and juicy pears'],
-                'ru' => ['title' => 'Груша', 'description' => 'Сладкие и сочные груши']
+                'en-US' => ['title' => 'Pear', 'description' => 'Sweet and juicy pears'],
+                'ru-RU' => ['title' => 'Груша', 'description' => 'Сладкие и сочные груши']
             ],
             [
-                'en' => ['title' => 'Persimmon', 'description' => 'Sweet and flavorful persimmons'],
-                'ru' => ['title' => 'Хурма', 'description' => 'Сладкая и ароматная хурма']
+                'en-US' => ['title' => 'Persimmon', 'description' => 'Sweet and flavorful persimmons'],
+                'ru-RU' => ['title' => 'Хурма', 'description' => 'Сладкая и ароматная хурма']
             ],
             [
-                'en' => ['title' => 'Pineapple', 'description' => 'Sweet and tropical pineapples'],
-                'ru' => ['title' => 'Ананас', 'description' => 'Сладкие и тропические ананасы']
+                'en-US' => ['title' => 'Pineapple', 'description' => 'Sweet and tropical pineapples'],
+                'ru-RU' => ['title' => 'Ананас', 'description' => 'Сладкие и тропические ананасы']
             ],
             [
-                'en' => ['title' => 'Plum', 'description' => 'Sweet and juicy plums'],
-                'ru' => ['title' => 'Слива', 'description' => 'Сладкие и сочные сливы']
+                'en-US' => ['title' => 'Plum', 'description' => 'Sweet and juicy plums'],
+                'ru-RU' => ['title' => 'Слива', 'description' => 'Сладкие и сочные сливы']
             ],
             [
-                'en' => ['title' => 'Pomegranate', 'description' => 'Juicy and flavorful pomegranates'],
-                'ru' => ['title' => 'Гранат', 'description' => 'Сочные и ароматные гранаты']
+                'en-US' => ['title' => 'Pomegranate', 'description' => 'Juicy and flavorful pomegranates'],
+                'ru-RU' => ['title' => 'Гранат', 'description' => 'Сочные и ароматные гранаты']
             ],
             [
-                'en' => ['title' => 'Raspberry', 'description' => 'Sweet and tangy raspberries'],
-                'ru' => ['title' => 'Малина', 'description' => 'Сладкая и кислая малина']
+                'en-US' => ['title' => 'Raspberry', 'description' => 'Sweet and tangy raspberries'],
+                'ru-RU' => ['title' => 'Малина', 'description' => 'Сладкая и кислая малина']
             ],
             [
-                'en' => ['title' => 'Sea buckthorn', 'description' => 'Tart and nutritious sea buckthorn'],
-                'ru' => ['title' => 'Облепиха', 'description' => 'Кислая и питательная облепиха']
+                'en-US' => ['title' => 'Sea buckthorn', 'description' => 'Tart and nutritious sea buckthorn'],
+                'ru-RU' => ['title' => 'Облепиха', 'description' => 'Кислая и питательная облепиха']
             ],
             [
-                'en' => ['title' => 'Strawberry', 'description' => 'Sweet and juicy strawberries'],
-                'ru' => ['title' => 'Клубника', 'description' => 'Сладкая и сочная клубника']
+                'en-US' => ['title' => 'Strawberry', 'description' => 'Sweet and juicy strawberries'],
+                'ru-RU' => ['title' => 'Клубника', 'description' => 'Сладкая и сочная клубника']
             ],
             [
-                'en' => ['title' => 'Sweet cherry', 'description' => 'Sweet and juicy sweet cherries'],
-                'ru' => ['title' => 'Черешня', 'description' => 'Сладкая и сочная черешня']
+                'en-US' => ['title' => 'Sweet cherry', 'description' => 'Sweet and juicy sweet cherries'],
+                'ru-RU' => ['title' => 'Черешня', 'description' => 'Сладкая и сочная черешня']
             ],
             [
-                'en' => ['title' => 'Tangerines', 'description' => 'Sweet and tangy tangerines'],
-                'ru' => ['title' => 'Мандарины', 'description' => 'Сладкие и кислые мандарины']
+                'en-US' => ['title' => 'Tangerines', 'description' => 'Sweet and tangy tangerines'],
+                'ru-RU' => ['title' => 'Мандарины', 'description' => 'Сладкие и кислые мандарины']
             ],
             [
-                'en' => ['title' => 'Watermelon', 'description' => 'Sweet and refreshing watermelons'],
-                'ru' => ['title' => 'Арбуз', 'description' => 'Сладкий и освежающий арбуз']
+                'en-US' => ['title' => 'Watermelon', 'description' => 'Sweet and refreshing watermelons'],
+                'ru-RU' => ['title' => 'Арбуз', 'description' => 'Сладкий и освежающий арбуз']
             ],
         ];
 
@@ -177,16 +176,16 @@ class ProductSeeder extends Seeder
 
             ProductTranslation::create([
                 'product_id' => $product->id,
-                'locale' => 'en',
-                'title' => $translations[$index]['en']['title'],
-                'description' => $translations[$index]['en']['description'],
+                'locale' => 'en-US',
+                'title' => $translations[$index]['en-US']['title'],
+                'description' => $translations[$index]['en-US']['description'],
             ]);
 
             ProductTranslation::create([
                 'product_id' => $product->id,
-                'locale' => 'ru',
-                'title' => $translations[$index]['ru']['title'],
-                'description' => $translations[$index]['ru']['description'],
+                'locale' => 'ru-RU',
+                'title' => $translations[$index]['ru-RU']['title'],
+                'description' => $translations[$index]['ru-RU']['description'],
             ]);
         }
     }

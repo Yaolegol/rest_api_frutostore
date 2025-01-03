@@ -12,7 +12,7 @@ class CatalogController extends Controller
      */
     public function index(Request $request)
     {
-        $locale = $request->get('locale', 'ru');
+        $locale = $request->get('locale', 'ru-RU');
 
         $query = Product::with(['category', 'translations' => function ($query) use ($locale) {
             $query->where('locale', $locale);
