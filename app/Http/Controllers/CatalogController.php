@@ -12,10 +12,15 @@ class CatalogController extends Controller
      */
     public function index(Request $request)
     {
-        $locale = $request->get('locale', 'ru-RU');
+        $originalLocale = $request->get('locale', 'en-US');
+        $lowercaseOriginalLocale = mb_strtolower($originalLocale, 'UTF-8');
+        $isRu = strpos($lowercaseOriginalLocale, 'ru') !== false;
 
-        $query = Product::with(['category', 'translations' => function ($query) use ($locale) {
-            $query->where('locale', $locale);
+        // Приведение строки к нижнему регистру
+        $lowercaseString = strtolower($originalString);
+
+        $query = Product::with(['category', 'translations' => function ($query) use ($isRu) {
+            $query->where('locale', $isRu ? 'ru-RU' : 'en-US');
         }]);
 
         $priceFilterFrom = null;
