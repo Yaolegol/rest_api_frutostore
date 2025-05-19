@@ -13,11 +13,8 @@ class CatalogController extends Controller
     public function index(Request $request)
     {
         $originalLocale = $request->get('locale', 'en-US');
-        $lowercaseOriginalLocale = mb_strtolower($originalLocale, 'UTF-8');
+        $lowercaseOriginalLocale = strtolower($originalLocale);
         $isRu = strpos($lowercaseOriginalLocale, 'ru') !== false;
-
-        // Приведение строки к нижнему регистру
-        $lowercaseString = strtolower($originalString);
 
         $query = Product::with(['category', 'translations' => function ($query) use ($isRu) {
             $query->where('locale', $isRu ? 'ru-RU' : 'en-US');
